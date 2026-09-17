@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "commitlint"
+version = "1.0.0"
+description = "Lint git commit messages against conventional-commits style."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Weekly Project Agent" }]
+keywords = ["git", "commitlint", "conventional-commits"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+commitlint = "commitlint:main"
+
+[tool.setuptools]
+py-modules = ["commitlint"]
+
+[tool.pytest.ini_options]
+addopts = "-q"

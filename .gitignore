@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.venv/
+.mypy_cache/
+.pytest_cache/
+
+# Git metadata
+.git/
+
+# Node
+node_modules/
+.next/
+
+# Editors
+.DS_Store
+.idea/
+.vscode/
+
+# Environment
+.env
+.env.*
+
+# Project tooling ignores
+AGENTS.md
+CLAUDE.md
+
+# Lock files / build outputs
+coverage/
+*.db
+dev.db
