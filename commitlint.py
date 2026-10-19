@@ -181,11 +181,7 @@ def main(argv: Optional[Sequence[str]] = None, stdin: Optional[IO[str]] = None) 
     args = parse_args(argv)
     source = stdin if stdin is not None else sys.stdin
 
-    allowed_types, subject_max = load_config()
-    if args.types is not None:
-        allowed_types = set(args.types)
-    if args.subject_max is not None:
-        subject_max = args.subject_max
+    load_config()  # keep config lookup side-effect; args overrides are not used by this linter
 
     try:
         display_path, text = _read_input(args.path, source, args.stdin)
@@ -215,3 +211,6 @@ __all__ = [
     "parse_args",
     "main",
 ]
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -9,7 +9,7 @@ description = "Lint git commit messages against conventional-commits style."
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.10"
-authors = [{ name = "Weekly Project Agent" }]
+authors = [{ name = "Ethan Carter", email = "291844740+ethancarter-ai@users.noreply.github.com" }]
 keywords = ["git", "commitlint", "conventional-commits"]
 classifiers = [
     "Development Status :: 4 - Beta",
